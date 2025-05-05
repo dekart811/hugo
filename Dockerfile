@@ -11,7 +11,7 @@ ENV GID=${PGID}
 RUN pacman-key --init && \
 	pacman-key --populate archlinux && \
 	pacman --noconfirm -Syyu && \
-	pacman --noconfirm -S hugo nodejs npm && \
+	pacman --noconfirm -S hugo nodejs npm go dart-sass && \
 	pacman --noconfirm -Scc && \
 	groupadd -g ${GID} hugo && \
 	useradd --create-home --gid ${GID} --uid ${UID} hugo && \
